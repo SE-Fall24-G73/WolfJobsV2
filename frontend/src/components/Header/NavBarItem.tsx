@@ -1,10 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom";
 
-const NavBarItem = (props: { link: string; text: string }) => {
-  let { link, text } = props;
+const NavBarItem = (props: {
+  link: string;
+  text: string;
+  setMobileMenuOpen?: any;
+  mobileMenuOpen?: boolean;
+}) => {
+  const { link, text, setMobileMenuOpen, mobileMenuOpen } = props;
   return (
     <>
-      <li>
+      <li onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         <Link to={link} className="hover:text-slate-500">
           {text}
         </Link>
