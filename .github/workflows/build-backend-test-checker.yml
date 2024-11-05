@@ -1,4 +1,4 @@
-name: Run Full Tests (Frontend and Backend)
+name: Backend Tests
 
 on:
   push:
@@ -48,7 +48,6 @@ jobs:
           files: ./coverage/lcov.info
           flags: backend
 
-  frontend-test:
     runs-on: ubuntu-latest
     defaults:
       run:
