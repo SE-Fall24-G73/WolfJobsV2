@@ -1,4 +1,4 @@
-name: Run Full Tests (Frontend and Backend)
+name: Backend Tests
 
 on:
   push:
@@ -47,30 +47,3 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage/lcov.info
           flags: backend
-
-  frontend-test:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Node.js for Frontend
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
-
-      - name: Install Frontend Dependencies
-        run: npm install
-
-      - name: Run Frontend Tests
-        run: npm test -- --coverage
-
-      - name: Upload Frontend Coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          flags: frontend

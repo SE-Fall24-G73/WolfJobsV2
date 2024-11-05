@@ -4,8 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm-build](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-checker.yml)
-[![Run Frontend Tests](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-frontend-test-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-frontend-test-checker.yml)
-[![Run Backend Tests](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-backend-test-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-backend-test-checker.yml)
+[![Frontend Tests](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-frontend-test-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-frontend-test-checker.yml)
+[![Backend Tests](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-backend-test-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-backend-test-checker.yml)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 [![Issues](https://img.shields.io/github/issues/SE-Fall24-G73/WolfJobsV2)](https://GitHub.com/SE-Fall24-G73/WolfJobsV2/)
 [![Issues Closed](https://img.shields.io/github/issues-closed/SE-Fall24-G73/WolfJobsV2)](https://GitHub.com/SE-Fall24-G73/WolfJobsV2/)
