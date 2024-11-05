@@ -5,9 +5,9 @@ name: daily-build-check
 
 on:
   push:
-    branches: ["master"]
+    branches: ["master-fall24-g73"]
   pull_request:
-    branches: ["master"]
+    branches: ["master-fall24-g73"]
   schedule:
     - cron: "0 3 * * *"
 
@@ -45,4 +45,3 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          path: /frontend/coverage
