@@ -1,12 +1,39 @@
-import { useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 import { useUserStore } from "../../store/UserStore";
 import NavBar from "./NavBar";
 import NavBarItem from "./NavBarItem";
+import axios from "axios";
+import { API_ROOT } from "../../api/constants";
 
 const Header = () => {
   const isLoggedIn = useUserStore((state) => state.isLoggedIn);
   const role = useUserStore((state) => state.role);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [notificationCount, setNotificationCount] = useState(0);
+
+  useEffect(() => {
+    if (isLoggedIn && role === "Applicant") {
+      axios
+        .get(`${API_ROOT}/users/fetchapplications`)
+        .then((res) => {
+          if (res.status === 200) {
+            const applications = res.data.application;
+            const acceptedCount = applications.filter(
+              (app: any) => app.status === "accepted"
+            ).length;
+            const rejectedCount = applications.filter(
+              (app: any) => app.status === "rejected"
+            ).length;
+            setNotificationCount(acceptedCount + rejectedCount);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching applications:", error);
+        });
+    }
+  }, [isLoggedIn, role]);
 
   return (
     <>
@@ -33,53 +60,73 @@ const Header = () => {
                 )}
                 {isLoggedIn && <NavBarItem link="/explore" text="All Jobs" />}
               </ul>
-              <NavBar />
+              <NavBar notificationCount={notificationCount} />
             </div>
 
             {/* Mobile Menu Button */}
             {isLoggedIn && (
-              <div className="lg:hidden">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                  <span className="sr-only">Open main menu</span>
-                  {mobileMenuOpen ? (
-                    <svg
-                      className="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
+              <>
+                <div className="flex flex-row items-center justify-center gap-x-1 lg:hidden">
+                  {isLoggedIn && role === "Applicant" && (
+                    <>
+                      <img
+                        src={"/images/bell.png"}
+                        alt="Notification"
+                        className="w-6 h-6"
                       />
-                    </svg>
-                  ) : (
-                    <svg
-                      className="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
+                      <span className="text-gray-500 text-sm">
+                        ({notificationCount})
+                      </span>
+                    </>
+                    // <NavBarItem
+                    //   link="/notifications"
+                    //   text={`Notifications (${notificationCount})`}
+                    // />
                   )}
-                </button>
-              </div>
+                  <div className="">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none"
+                      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                      <span className="sr-only">Open main menu</span>
+                      {mobileMenuOpen ? (
+                        <svg
+                          className="h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          className="h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                          />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </>
             )}
           </div>
         </div>

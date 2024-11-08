@@ -1,36 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
-import axios from "axios";
+
 import { useUserStore } from "../../store/UserStore";
 import NavBarItem from "./NavBarItem";
 
-const NavBar = () => {
+const NavBar = ({ notificationCount }: { notificationCount: any }) => {
   const isLoggedIn = useUserStore((state) => state.isLoggedIn);
   const role = useUserStore((state) => state.role);
-
-  const [notificationCount, setNotificationCount] = useState(0);
-
-  useEffect(() => {
-    if (isLoggedIn && role === "Applicant") {
-      axios
-        .get("http://localhost:8000/api/v1/users/fetchapplications")
-        .then((res) => {
-          if (res.status === 200) {
-            const applications = res.data.application;
-            const acceptedCount = applications.filter(
-              (app: any) => app.status === "accepted"
-            ).length;
-            const rejectedCount = applications.filter(
-              (app: any) => app.status === "rejected"
-            ).length;
-            setNotificationCount(acceptedCount + rejectedCount);
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching applications:", error);
-        });
-    }
-  }, [isLoggedIn, role]);
 
   return (
     <>

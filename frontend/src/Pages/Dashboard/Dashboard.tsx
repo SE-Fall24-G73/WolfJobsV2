@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-boolean-cast */
 import { useEffect, useState } from "react";
 import JobDetailView from "../../components/Job/JobDetailView";
 import axios from "axios";
@@ -27,6 +28,8 @@ const Dashboard = () => {
   const updateIsLoggedIn = useUserStore((state) => state.updateIsLoggedIn);
   const updateResume = useUserStore((state) => state.updateResume);
   const updateResumeId = useUserStore((state) => state.updateResumeId);
+  const updateUnityId = useUserStore((state) => state.updateUnityId);
+  const updateStudentId = useUserStore((state) => state.updateStudentId);
 
   const role = useUserStore((state) => state.role);
   const managerId = useUserStore((state) => state.id);
@@ -68,6 +71,8 @@ const Dashboard = () => {
       updateIsLoggedIn(true);
       updateResume(userInfo.resume);
       updateResumeId(userInfo.resumeId);
+      updateUnityId(userInfo.unityId);
+      updateStudentId(userInfo.studentId);
     }
   }, []);
 

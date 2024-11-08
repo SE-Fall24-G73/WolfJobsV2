@@ -46,7 +46,7 @@ module.exports.googleLogin = async function (req, res) {
         email,
         name,
         password: crypto.randomBytes(20).toString("hex"), // Assign a random password
-        role: "applicant", // Default role; adjust as needed
+        role: "Applicant", // Default role; adjust as needed
         isVerified: true, // Since Google verifies email
         googleId,
         avatar,
