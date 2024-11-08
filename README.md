@@ -87,11 +87,18 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 ## Applicant Side
 
 ### Authentication
-<img src="./artifacts/login_page.jpg" alt="Login page" style="width: 500px;"><br>
-![Signup Page](![image](https://github.com/user-attachments/assets/5a74d1b3-9f96-4c2f-8714-8cd36f137acf))
-![Login Page](![image](https://github.com/user-attachments/assets/4e482a91-b755-44e4-beab-9095bfa7bb2f))
-![Reset Password](![image](https://github.com/user-attachments/assets/caf1c2d4-4e8e-4a16-9306-20f49c4c6adb))
-![Register Page](![image](https://github.com/user-attachments/assets/d5ec32d2-04f6-4213-b6eb-4297eb671a7c))
+#### Landing Page
+<img src="./artifacts/landing_page.jpg" alt="Landing page" style="width: 1000px;"><br>
+
+#### SignUp Page
+<img src="./artifacts/register_page.jpg" alt="Signup page" style="width: 1000px;"><br>
+
+#### Login Page
+<img src="./artifacts/login_page.jpg" alt="Login page" style="width: 1000px;"><br>
+
+#### Reset Password Page
+<img src="./artifacts/forgot_password.jpg" alt="Signup page" style="width: 1000px;"><br>
+
 ![Reset Email](![WhatsApp Image 2024-11-01 at 22 24 17_01f3bb0e](https://github.com/user-attachments/assets/c416b219-e20a-41e7-911d-ee505b44eff9))
 
 ### Student Applies for Job
