@@ -87,7 +87,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 ## Applicant Side
 
 ### Authentication
-
+<img src="./artifacts/login_page.jpg" alt="Login page" style="width: 500px;"><br>
 ![Signup Page](![image](https://github.com/user-attachments/assets/5a74d1b3-9f96-4c2f-8714-8cd36f137acf))
 ![Login Page](![image](https://github.com/user-attachments/assets/4e482a91-b755-44e4-beab-9095bfa7bb2f))
 ![Reset Password](![image](https://github.com/user-attachments/assets/caf1c2d4-4e8e-4a16-9306-20f49c4c6adb))
