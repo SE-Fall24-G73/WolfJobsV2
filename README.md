@@ -1,6 +1,6 @@
 ![Banner](https://github.com/deepr41/WolfJobs/blob/GIF-Update/GIFs/Banner.png)
 
-## Deployed Link: https://wolf-jobs.vercel.app/
+## Deployed Link: https://wolfjobs.vercel.app/
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm-build](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-checker.yml/badge.svg)](https://github.com/SE-Fall24-G73/WolfJobsV2/actions/workflows/build-checker.yml)
