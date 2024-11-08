@@ -86,20 +86,19 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 
 ## Applicant Side
 
-### Authentication
-#### Landing Page
+### Landing Page
 <img src="./artifacts/landing_page.jpg" alt="Landing page" style="width: 1000px;"><br>
 
-#### SignUp Page
+### SignUp Page
 <img src="./artifacts/register_page.jpg" alt="Signup page" style="width: 1000px;"><br>
 
-#### Login Page
+### Login Page
 <img src="./artifacts/login_page.jpg" alt="Login page" style="width: 1000px;"><br>
 
-#### Reset Password Page
+### Reset Password Page
 <img src="./artifacts/forgot_password.jpg" alt="Signup page" style="width: 1000px;"><br>
 
-![![WhatsApp Image 2024-11-01 at 22 24 17_01f3bb0e](https://github.com/user-attachments/assets/c416b219-e20a-41e7-911d-ee505b44eff9)
+![WhatsApp Image 2024-11-01 at 22 24 17_01f3bb0e](https://github.com/user-attachments/assets/c416b219-e20a-41e7-911d-ee505b44eff9)
 
 ### Student Applies for Job
 
@@ -133,7 +132,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 <img src="./artifacts/ats_score.jpg" alt="ATS Score page" style="width: 1000px;"><br>
 
 ### Email Notification
-![Recieved Email Notification](![WhatsApp Image 2024-11-01 at 22 24 27_07bfdb11](https://github.com/user-attachments/assets/1ae4593b-90ee-403d-adae-e8ce0ccb16ef))
+![WhatsApp Image 2024-11-01 at 22 24 27_07bfdb11](https://github.com/user-attachments/assets/1ae4593b-90ee-403d-adae-e8ce0ccb16ef)
 
 ### Profile Match Percentage for Managers
 <img src="./artifacts/match_percentage.jpg" alt="Match percent" style="width: 1000px;"><br>
