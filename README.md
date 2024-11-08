@@ -98,6 +98,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 ### Reset Password Page
 <img src="./artifacts/forgot_password.jpg" alt="Signup page" style="width: 1000px;"><br>
 
+### Reset Password Email
 ![WhatsApp Image 2024-11-01 at 22 24 17_01f3bb0e](https://github.com/user-attachments/assets/c416b219-e20a-41e7-911d-ee505b44eff9)
 
 ### Student Applies for Job
